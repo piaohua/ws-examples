@@ -1,7 +1,5 @@
 #!/bin/sh
-
 chat_port=3333
-
 ./bin/chat -listen=":${chat_port}" &
 chat_pid=$!
 for t in $(yes "1" | head -n 5); do
@@ -11,5 +9,5 @@ for t in $(yes "1" | head -n 5); do
 	fi
 	sleep $t
 done
-
+PORT=8888
 ./bin/proxy -listen=":${PORT}" -chat_addr=":${chat_port}"

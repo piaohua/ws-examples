@@ -21,6 +21,8 @@ Currently these commands are developed:
   files for chat ui. Second and technical one is to proxy `/ws` requests to
   running chat app. This is done only for running on heroku, where only one port
   is able to be exported.
+- `docker build -t ws-chat:latest .` docker build.
+- `docker run -p 8888:8888 -p 3333:3333 ws-chat:latest` docker run.
 
 ## Building
 
